@@ -6,7 +6,7 @@ WORKDIR $HOME/projects/Cartantarctica/
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apk update && install -y \
+RUN su && apk update && apk add --no-interactive \
     qgis \
     git \
     vim \
